@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"> <!-- Link to your custom CSS file -->
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Property Listings</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Find Your Dream Property</h1>
+        <p class="lead">Browse through the best properties available in the city.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+    </div>
+
+     <!-- Search form -->
+     <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form id="searchForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="Enter location">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="houseType">House Type</label>
+                            <select id="houseType" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Apartment</option>
+                                <option>House</option>
+                                <option>Condo</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="priceRange">Price Range</label>
+                            <select id="priceRange" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="0-500000">$0 - $500,000</option>
+                                <option value="500000-1000000">$500,000 - $1,000,000</option>
+                                <option value="1000000-2000000">$1,000,000 - $2,000,000</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Property Card -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/vi.jpg" class="card-img-top" alt="Property Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Property Title</h5>
+                        <p class="card-text">This is a short description of the property.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <a href="property_detail.html">View</a>
+                                </button>
+                                
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">$200,000</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat Property Card for more listings -->
+        </div>
+    </div>
+
+    <footer class="text-muted py-4 bg-light">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>&copy; 2024 Property Listings, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    // Handle form submission
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        // Get the search query from the input field
+        var searchQuery = document.getElementById('searchQuery').value;
+        // Perform search operation with the searchQuery
+        // Example: You can use AJAX to fetch search results and update the page accordingly
+        console.log('Performing search with query: ' + searchQuery);
+    });
+</script>
+</html>
